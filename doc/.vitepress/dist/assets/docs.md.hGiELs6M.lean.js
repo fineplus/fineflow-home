@@ -1,0 +1,1 @@
+import{_ as s,o as i,c as a,R as n}from"./chunks/framework.YrtQT249.js";const g=JSON.parse('{"title":"Markdown Extension Examples","description":"","frontmatter":{},"headers":[],"relativePath":"docs.md","filePath":"docs.md"}'),t={name:"docs.md"},l=n("",19),e=[l];function p(h,k,r,o,d,E){return i(),a("div",null,e)}const u=s(t,[["render",p]]);export{g as __pageData,u as default};
