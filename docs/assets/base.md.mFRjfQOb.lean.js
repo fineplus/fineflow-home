@@ -1,1 +1,0 @@
-import{_ as a,o as e,c as t,R as r}from"./chunks/framework.EjZ06QX2.js";const b=JSON.parse('{"title":"基本操作","description":"","frontmatter":{},"headers":[],"relativePath":"base.md","filePath":"base.md"}'),o={name:"base.md"},h=r("",21),i=[h];function l(n,d,s,c,p,u){return e(),t("div",null,i)}const q=a(o,[["render",l]]);export{b as __pageData,q as default};
