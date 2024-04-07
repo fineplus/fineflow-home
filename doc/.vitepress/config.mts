@@ -57,6 +57,7 @@ export default defineConfig({
         items: [
           { text: "快捷键", link: "/keyboards" },
           { text: "常见问题", link: "/questions" },
+          { text: "项目进度", link: "/todolist" },
 
         ],
       },
