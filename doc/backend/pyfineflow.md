@@ -70,25 +70,40 @@ python main.py
 输出如下
 
 ```shell
-docs:  http://127.0.0.1:8081/pyserver/docs
-2024-01-27  12:55:08 INFO:     Started server process [26540]
-2024-01-27  12:55:08 INFO:     Waiting for application startup.
-2024-01-27  12:55:08 INFO:     Application startup complete.
-2024-01-27  12:55:08 INFO:     Uvicorn running on http://127.0.0.1:8081
+docs:  http://127.0.0.1:8081/python后端/docs
+server url:  http://127.0.0.1:8081/python后端
+server key:  python后端
+2024-04-07  19:16:54 INFO:     Started server process [3040]
+2024-04-07  19:16:54 INFO:     Waiting for application startup.
+2024-04-07  19:16:54 INFO:     Application startup complete.
+2024-04-07  19:16:54 INFO:     Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
 ```
+其中**server url**为服务的链接，
+ **server key**为服务的key
 
 然后在fineflow界面添加server
 
-点击左下角**服务管理**，然后在**节点服务**点击**添加**按钮，输入server地址：
+点击左下角**服务管理**，然后在**节点服务**点击**添加**按钮，配置服务信息：
+
+| 配置项 | 说明                  |
+|-----|---------------------|
+| 索引  | 服务的server key       |
+| 名称  | 可以自定义               |
+| 链接  | 服务的链接，上述的server url |
+
 
 ![add_server](/backend/pyfineflow/add_server.png)
 
 添加完成后，在服务管理启用对应的server，在节点列表即可看到新添加的节点
 ![enable_server](/backend/pyfineflow/enable_server.png)
 
-如图为新添加的后端节点
+如图为新添加的后端节点,它的名称为app.py里Fine的第一个参数
+```python
+fine = Fine('pyserver', 'python后端')
+```
+
 <div style="justify-content:center;display:flex;">
-    <img src="/backend/pyfineflow/new_nodes.png" width="500" >
+    <img src="/backend/pyfineflow/new_nodes.png" width="300" >
 </div>
 
 ## 后端节点详细设计
