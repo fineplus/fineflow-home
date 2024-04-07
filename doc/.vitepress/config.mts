@@ -22,6 +22,7 @@ export default defineConfig({
         items: [
           { text: "简介", link: "/introduction" },
           { text: "快速上手", link: "/quick-start" },
+          { text: "软件下载", link: "/soft-download" },
         ],
       },
       {
