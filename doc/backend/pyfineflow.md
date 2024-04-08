@@ -110,19 +110,19 @@ fine = Fine('pyserver', 'python后端')
 
 后端节点编写时需要注意:
 1. 需要配置参数类型，若不配置则默认为any类型。
-2. 函数有多个返回参数时，返回值是字典，{"key1":value,"key2":value},和前端编写节点是一样的，然后在config里配置输入输出参数的信息，不配置的话会默认取参数的键值。
+2. 函数有多个返回参数时，使用如下的方式return多个参数，并配置返回类型，注意一定是"return 参数1,参数2"这种形式，不能写成表达式，然后可以在config里配置输入输出参数的信息，config中配置的信息会覆盖默认配置，如下的output的三种参数配置方式都是可行的。
 
 ```python
 # 很多参数都不用配置，不配置会有默认配置，有多个返回值时使用字典来返回，并且不用配置函数的返回参数类型。
 @fine.node(category='数学运算', name="返回多个值",
            config={'input': [{"key": "num1", "config": {"type": "integer"}}, {"key": "num2"}],
-                   'output': [{"key": "num",  "config": {"type": "integer"}},
-                              {"key": "num1", "name": "num1", "config": {"type": "integer"}},
+                   'output': [{"key": "num"},
+                              {"key": "num1", "config": {"type": "integer"}},
                               {"key": "num2", "name": "num2", "config": {"type": "integer"}}]
                    })
-def add(num1: int, num2: int):
+def add(num1: int, num2: int)->(int,int,int):
     num = num2 + num1
-    return {"num": num, "num1": num1, "num2": num2}
+    return num,num1,num2
 ```
 
 ::: tip
