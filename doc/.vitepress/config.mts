@@ -27,7 +27,8 @@ export default defineConfig({
       },
       {
         text: "使用说明",
-        items: [{ text: "基本操作", link: "/base" }],
+        items: [{ text: "基本操作", link: "/base" },
+          { text: "其他说明", link: "/other-des" }],
       },
       // {
       //   text: "流程设计指南",
