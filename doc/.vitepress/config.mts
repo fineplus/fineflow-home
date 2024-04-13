@@ -49,6 +49,7 @@ export default defineConfig({
         text: "后端集成",
         items: [
           { text: "pyfineflow", link: "/backend/pyfineflow" },
+          { text: "系统python", link: "/backend/system-py" },
           // { text: "建议规范", link: "/docs" },
         ],
       },
