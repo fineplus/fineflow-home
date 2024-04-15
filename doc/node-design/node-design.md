@@ -127,14 +127,14 @@ pyfineflow的后端节点节点设计请参考后续章节。
 
 代码中props、emits、还有methods中有一些预置的定义，具体含义如下表所示：
 
-| 配置项                 | 描述                                                   |
-|---------------------|------------------------------------------------------|
-| props->inputs       | 节点综合输入参数字典(只读)                                       |
-| props->outputs      | 节点综合输出参数字典(只读)                                       |
-| props->userInputs   | 节点用户手动输入参数字典(只读)                                     |
-| props->serverStates | 后端传递的状态信息(只读)                                        |
-| emits->update:input | 更新用户输入参数的事件,使用方法:this.emit('update:input',key,value) |
-| methods->func       | 若该方法存在则节点执行时会优先执行该函数，编写方法和节点js函数一样，可使用async          |
+| 配置项                 | 描述                                                    |
+|---------------------|-------------------------------------------------------|
+| props->inputs       | 节点综合输入参数字典(只读)                                        |
+| props->outputs      | 节点综合输出参数字典(只读)                                        |
+| props->userInputs   | 节点用户手动输入参数字典(只读)                                      |
+| props->serverStates | 后端传递的状态信息(只读)                                         |
+| emits->update:input | 更新用户输入参数的事件,使用方法:this.$emit('update:input',key,value) |
+| methods->func       | 若该方法存在则节点执行时会优先执行该函数，编写方法和节点js函数一样，可使用async           |
 
 ## 节点编辑示例
 
