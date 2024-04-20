@@ -28,3 +28,62 @@ fineflow是一个让用户自己设计自己工作流和节点的软件。
 ## 4. 是否开源
 
 pyfineflow库是开源的，开发者可以参考这个库去实现别的开发语言的库。但前端部分和api部分未开源，原因还是希望工作流的节点形式能有一个规范规定，如果开源可能会出现各种版本各种分支。
+
+## 5. 如何快速刷新后端节点
+
+可以使用jurigged热更新库来实现
+
+1. 安装jurigged库
+```shell
+pip install jurigged
+```
+2. 在main.py增加start_hotreload函数并调用
+```python
+# main.py
+from app import fine
+import builtins
+
+######### 增加的部分
+def start_hotreload():
+    import jurigged
+    open_org = builtins.open
+
+    def custom_open(file, mode='r', buffering=-1, encoding='utf-8', errors=None, newline=None, closefd=True,
+                    opener=None):
+        return open_org(file, mode, buffering, encoding, errors, newline, closefd, opener)
+
+    builtins.open = custom_open
+
+    jurigged.watch()
+
+
+start_hotreload()
+######### 
+
+
+def init():
+    import math_nodes
+    _ = math_nodes
+
+
+init()
+
+fine.init_server(port=8081)
+```
+3. 当server后端修改代码或增加了一些节点后保存代码文件，它会自动更新无需重启后端
+4. 在fineflow前端，使用快捷键ctrl+shift+F来刷新节点即可看到节点的更新。
+
+::: tip
+注意，该热更新库很方便，但注意可能它会存在一些问题，最好还是可以重启后端代码来更新。
+:::
+
+## 6. vue中如何引入别的前端库(CDN)
+
+当vue中需要使用别的库如echart或lodash等等，可以使用如下component的方式来引入，参见节点范例的ecahrt图表节点
+
+```vue
+<template>
+   <component is=script src='https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js'/>
+   <component is=script src='https://cdn.bootcdn.net/ajax/libs/echarts-gl/2.0.8/echarts-gl.min.js'/>
+</template>
+```

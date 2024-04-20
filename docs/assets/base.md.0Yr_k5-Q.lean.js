@@ -1,0 +1,1 @@
+import{_ as a,o as e,c as t,R as r}from"./chunks/framework.sV2QzebO.js";const _=JSON.parse('{"title":"基本操作","description":"","frontmatter":{},"headers":[],"relativePath":"base.md","filePath":"base.md"}'),o={name:"base.md"},i=r("",23),h=[i];function l(n,d,s,c,p,b){return e(),t("div",null,h)}const f=a(o,[["render",l]]);export{_ as __pageData,f as default};
