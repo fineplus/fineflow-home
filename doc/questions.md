@@ -82,7 +82,6 @@ fine.init_server(port=8081)
 当vue中需要使用别的库如echart或lodash等等，可以使用如下在vue中配置lib的方式来引入，参见节点范例的ecahrt图表节点
 
 ```vue
-```vue
 <template>
   <div style="height:200px;width:200px;" :id='id'></div>
 </template>
