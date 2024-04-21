@@ -135,6 +135,7 @@ pyfineflow的后端节点节点设计请参考后续章节。
 | props->serverStates | 后端传递的状态信息(只读)                                         |
 | emits->update:input | 更新用户输入参数的事件,使用方法:this.$emit('update:input',key,value) |
 | methods->func       | 若该方法存在则节点执行时会优先执行该函数，编写方法和节点js函数一样，可使用async           |
+| lib                 | 可配置需要引入的外部cdn脚本                                       |
 
 ## 节点编辑示例
 
@@ -175,6 +176,10 @@ pyfineflow的后端节点节点设计请参考后续章节。
     data: () => {
       return {msg: ""}
     },
+    // lib可以配置外部cdn脚引入
+    // lib:[
+    //   {name:'ecahrts',src:"https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"},
+    // ],
     methods: {
       updateInput() {
         this.$emit("update:input", "num1", 9)

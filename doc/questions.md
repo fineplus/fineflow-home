@@ -79,11 +79,24 @@ fine.init_server(port=8081)
 
 ## 6. vue中如何引入别的前端库(CDN)
 
-当vue中需要使用别的库如echart或lodash等等，可以使用如下component的方式来引入，参见节点范例的ecahrt图表节点
+当vue中需要使用别的库如echart或lodash等等，可以使用如下在vue中配置lib的方式来引入，参见节点范例的ecahrt图表节点
 
 ```vue
+```vue
 <template>
-   <component is=script src='https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js'/>
-   <component is=script src='https://cdn.bootcdn.net/ajax/libs/echarts-gl/2.0.8/echarts-gl.min.js'/>
+  <div style="height:200px;width:200px;" :id='id'></div>
 </template>
+
+<script>
+  export default {
+    props: ["inputs", "outputs", "serverStates"],
+    emits: ["update:input"],
+    data: () => {
+      return {id: "echart图表" + Math.random()}
+    },
+    lib:[
+      {name:'ecahrts',src:"https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"},
+      {name:'ecahrtsGl',src:"https://cdn.bootcdn.net/ajax/libs/echarts-gl/2.0.8/echarts-gl.min.js"},
+    ]}
+</script>
 ```
