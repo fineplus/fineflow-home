@@ -1,1 +1,0 @@
-import{_ as s,o as i,c as a,R as n}from"./chunks/framework.sV2QzebO.js";const y=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"questions.md","filePath":"questions.md"}'),h={name:"questions.md"},l=n("",25),t=[l];function p(k,e,E,r,d,g){return i(),a("div",null,t)}const c=s(h,[["render",p]]);export{y as __pageData,c as default};

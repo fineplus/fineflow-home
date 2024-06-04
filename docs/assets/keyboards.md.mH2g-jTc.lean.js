@@ -1,1 +1,0 @@
-import{_ as t,o as d,c as r,R as e}from"./chunks/framework.sV2QzebO.js";const m=JSON.parse('{"title":"快捷键","description":"","frontmatter":{},"headers":[],"relativePath":"keyboards.md","filePath":"keyboards.md"}'),a={name:"keyboards.md"},o=e("",3),c=[o];function s(l,_,n,h,i,b){return d(),r("div",null,c)}const p=t(a,[["render",s]]);export{m as __pageData,p as default};

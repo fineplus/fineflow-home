@@ -28,7 +28,7 @@ export default defineConfig({
       {
         text: "使用说明",
         items: [{ text: "基本操作", link: "/base" },
-          { text: "其他说明", link: "/other-des" }],
+        { text: "其他说明", link: "/other-des" }],
       },
       // {
       //   text: "流程设计指南",
@@ -61,6 +61,12 @@ export default defineConfig({
           { text: "常见问题", link: "/questions" },
           { text: "项目进度", link: "/todolist" },
 
+        ],
+      },
+      {
+        text: "开发者指南",
+        items: [
+          { text: "项目开发", link: "/developer" },
         ],
       },
     ],

@@ -1,0 +1,1 @@
+import{_ as s,o as i,c as a,R as e,a4 as l}from"./chunks/framework.aUMjcNCh.js";const u=JSON.parse('{"title":"开发者指南","description":"","frontmatter":{},"headers":[],"relativePath":"developer.md","filePath":"developer.md"}'),t={name:"developer.md"},h=e("",35),n=[h];function p(k,d,r,o,c,F){return i(),a("div",null,n)}const C=s(t,[["render",p]]);export{u as __pageData,C as default};
